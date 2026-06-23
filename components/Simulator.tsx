@@ -108,8 +108,8 @@ export default function Simulator() {
 
         <div>
           <div className="panel" style={{ marginBottom: 24 }}>
-            <h2>Gross Profit Build</h2>
-            <div className="panel-sub">Monthly, across the full horizon</div>
+            <h2>{metric === 'gp' ? 'Gross Profit' : metric === 'rev' ? 'Net Revenue' : 'Processing Volume'} Build</h2>
+            <div className="panel-sub">Monthly across the full horizon · exit run-rate {fmtR(metric === 'gp' ? sim.exitGP : metric === 'rev' ? sim.exitRev : sim.exitVol)}</div>
             <div className="chart-tabs">
               {([['gp', 'Gross Profit'], ['rev', 'Net Revenue'], ['vol', 'Volume']] as [Metric, string][]).map(([m, label]) => (
                 <button key={m} className={metric === m ? 'active' : ''} onClick={() => setMetric(m)}>{label}</button>
