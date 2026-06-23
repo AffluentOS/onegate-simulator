@@ -120,3 +120,37 @@ footer b{color:var(--navy)}
 .login-card input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.35)}
 .login-card button{width:100%;margin-top:20px;font-weight:700;font-size:15px;color:var(--deep-navy);background:var(--gold);border:none;border-radius:var(--radius-md);padding:13px;cursor:pointer}
 .login-card .err{color:#B02A2A;font-size:13px;margin-top:12px}
+.login-foot{font-size:13px;color:var(--text-muted);margin-top:18px;text-align:center}
+.login-foot a{color:var(--royal);font-weight:600;text-decoration:none}
+
+/* ── Gear + settings ─────────────────────────────────────────────── */
+.gear{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:var(--radius-md);border:1px solid rgba(245,240,228,.4);color:rgba(245,240,228,.85);text-decoration:none;transition:all .15s}
+.gear:hover{background:rgba(245,240,228,.12);color:var(--cream)}
+.gear svg{width:20px;height:20px}
+
+.settings-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px}
+.settings-title{font-family:var(--font-display),Georgia,serif;font-weight:700;font-size:34px;color:var(--navy);margin-top:8px;line-height:1}
+.panel h3.subhead{font-family:var(--font-body),sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);margin:14px 0 12px}
+
+.btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-body),sans-serif;font-weight:600;font-size:13px;color:var(--navy);background:var(--bg);border:1px solid var(--border-mid);border-radius:var(--radius-md);padding:9px 16px;cursor:pointer;text-decoration:none;transition:all .15s}
+.btn:hover{border-color:var(--gold)}
+.btn-primary{background:var(--gold);color:var(--deep-navy);border-color:var(--gold)}
+.btn-danger{background:var(--bg);color:#B02A2A;border-color:#E3B7B7;padding:7px 12px;font-size:12px}
+.btn-danger:hover{background:#FFF0F0;border-color:#B02A2A}
+
+.input{font-family:var(--font-body),sans-serif;font-size:14px;padding:10px 12px;border:1px solid var(--border-mid);border-radius:var(--radius-md);color:var(--text-dark);background:var(--bg)}
+.input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.35)}
+.formgrid{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}
+.formgrid .afield{flex:1;min-width:180px}
+.formgrid .afield label{font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px}
+.formgrid .input{width:100%}
+
+.msg{margin-top:14px;font-size:13px;font-weight:500;padding:8px 12px;border-radius:var(--radius-md);display:inline-block}
+.msg-ok{color:var(--success);background:#E8F5EF}
+.msg-err{color:#B02A2A;background:#FFF0F0}
+
+.inviteform{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.invlist{display:flex;flex-direction:column;gap:10px}
+.invrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.linkfield{flex:1;min-width:280px;font-family:var(--font-mono),monospace;font-size:12px;padding:8px 10px;border:1px solid var(--border-light);border-radius:var(--radius-md);background:var(--mist);color:var(--text-dark)}
+.pill{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--royal);background:var(--mist);border-radius:var(--radius-full);padding:4px 12px}
