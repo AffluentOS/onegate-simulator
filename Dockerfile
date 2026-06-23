@@ -1,21 +1,18 @@
 # ── OneGate Simulator — Next.js standalone (Coolify) ────────────────
-FROM node:22-alpine AS base
-RUN corepack enable
+# Uses npm to avoid the build host's pnpm minimum-release-age policy.
+
+FROM node:22-alpine AS deps
 WORKDIR /app
+COPY package.json ./
+RUN npm install --no-audit --no-fund
 
-# deps
-FROM base AS deps
-COPY package.json pnpm-lock.yaml* ./
-RUN pnpm install --frozen-lockfile || pnpm install
-
-# build
-FROM base AS build
+FROM node:22-alpine AS build
+WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN pnpm build
+RUN npm run build
 
-# run
 FROM node:22-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
